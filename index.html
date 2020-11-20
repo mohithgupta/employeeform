@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <script src="https://kit.fontawesome.com/904a7d5ff1.js" crossorigin="anonymous"></script>
-     
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Saarthi.ai Employee form</title>
-  </head>
-  <body>
+</head>
 
-    <!-- button -->
+<body>
 
- <div class="new-employee-div">  <button class="new-employee" id="new-employee">NEW EMPLOYEE</button>
-      </div>
-<!-- <i class="fas fa-address-book"></i>&nbsp;&nbsp; -->
+    <div class="new-employee-div"> 
+      <button class="new-employee" id="new-employee">
+        <i class="fas fa-address-book"></i>&nbsp;&nbsp;NEW EMPLOYEE
+      </button>
+    </div>
     <main class="main-container">
-      
-<button class="new-employee add-new-employee hidden" id="new-employee">NEW EMPLOYEE</button>
-      <!-- Form -->
-<!-- 
-        <div class="form-container"> -->
-          <div class="form-div">
-         <p class="form-heading">Employee Details </p>
+        <button class="new-employee add-new-employee hidden" id="new-employee">
+          <i class="fas fa-address-book"></i>&nbsp;&nbsp;NEW EMPLOYEE
+        </button>
+        <p class="company-name">SAARTHI.AI</p>
+        <div class="form-div">
+            <p class="form-heading">Employee Details </p>
+            <form class="details-form" id="form">
+                <label for="Name">Name :<input type="text" name="Name" class="input" id="name" required></label>
+                <label for="Employee ID">Employee ID :<input type="text" name="Employee ID" class="input" id="employee-id" required></label>
+                <label for="Department">Department :
+                    <select name="Department" class="select" id="select-option" required>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Full Stack">Full Stack</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Security Analyst">Security Analyst</option>
+                    </select>
+                </label>
+                <label for="email"> Email ID : <input type="text" name="email" class="input" id="email" required></label>
+                <label for="doj"> Date of Joining : <input type="date" name="doj" class="input" id="doj" required> </label>
+                <button name="clear" class="input clear-details-btn" id="clear-details-button">Clear Details</button>
+                <input type="submit" class="submit-btn" id="submit-button" value="Submit Details" />
+            </form>
+        </div>
 
- <form class="details-form" id="form">
-            
-      <label for="Name">Name :<input type="text" name="Name" class="input" id="name" required></label>
-    <label for="Employee ID">Employee ID :<input type="text" name="Employee ID" class="input" id="employee-id" required></label>
-    <label for="Department">Department :
-    <select name="Department" class="select" id="select-option" required>
-    <option value="Frontend">Frontend</option>
-    <option value="Backend">Backend</option>
-    <option value="Full Stack">Full Stack</option>
-    <option value="Artificial Intelligence">Artificial Intelligence</option>
-    <option value="Security Analyst">Security Analyst</option>
-    </select>
-    </label>
-    <label for="email"> Email ID : <input type="text" name="email" class="input" id="email" required></label>
-    <label for="doj">  Date of Joining : <input type="date" name="doj" class="input" id="doj" required>  </label>
-    <button name="clear" class="input clear-details-btn" id="clear-details-button">Clear Details</button>
-    <input type="submit" class="submit-btn" id="submit-button" value="Submit Details" />
-         </form>
-       </div>
-      <!-- </div> -->
+        <div class="table-container">
 
-<div class="table-container">
-        
-          <!-- Table -->
-           
- <table class="table" id="tableId">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Employee ID</th>
-      <th>Department</th>
-      <th>Email Id</th>
-      <th>Date of Joining</th>
-    </tr>
-  </thead>
-  <tbody class="tbody" id="tbodyId">
-   <!--  <tr>
-      <td></td>
-    </tr> -->
-  </tbody>
-</table>
-
+            <table class="table" id="tableId">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Email Id</th>
+                        <th>Date of Joining</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody" id="tbodyId">
+                </tbody>
+            </table>
+        </div>
+      <div class="overlay">
+  <div class="popup">
+    <div class="popup-border">
+    <p>Confirm Delete?</p>
+    <div class="confirm-buttons-div">
+      <button class="btn btn-yes">Yes</button>
+      <button class="btn btn-cancel">Cancel</button>
+    </div>
+    </div>
+  </div>
 </div>
-   
 
-    </main> 
-<script src="https://kit.fontawesome.com/904a7d5ff1.js" crossorigin="anonymous"></script>
+
+    </main>
+    <script src="https://kit.fontawesome.com/904a7d5ff1.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
 
-  </body>
 </html>
