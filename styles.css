@@ -418,10 +418,6 @@ th:nth-of-type(6),td:nth-of-type(6){
   min-width: 130px;
 }
 
-tr td,tr th{
-/*  border-right: #000 1px solid;
-  border-left: #000 1px solid;*/
-}
 tr td:first-of-type {
     background-color: none;
     border: none;
@@ -442,7 +438,7 @@ tr i:hover {
       min-width: 450px;
       left:25%;
       top:-15vh;
-      height: 39.3vh;
+      height: auto;
       overflow-y:auto; 
   }
   thead tr { 
@@ -475,7 +471,6 @@ tr i:hover {
     top: 3px;
     left: 6px;
     padding: 10px; 
-    /*white-space: nowrap;*/
     text-align: left;
   }
   td:nth-of-type(2):before { content: "Name"; }
@@ -485,6 +480,7 @@ tr i:hover {
   td:nth-of-type(6):before { content: "Date of Joining"; }
 
   tr i {
+    width:100%;
     border-radius: 50%;
     border:#fff 1px solid;
     padding: 05px;
@@ -522,7 +518,6 @@ tr i:hover {
 @media only screen and (max-width: 540px){
   table{
     left:7%;
-    height: 43vh
   }
   .add-new-employee{
     left:25%;
@@ -553,8 +548,8 @@ tr i:hover {
   .overlay {
   position: fixed;
   width: 100%;
-  top:100%;
-  left: 0;
+  top:0;
+  left: -100%;
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,.6);
@@ -563,13 +558,13 @@ tr i:hover {
 .popup {
   width: 33%;
   padding: 15px;
-  left: 0%;
+  left: -100%;
+  top:0;
   margin-left: 34%;
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
   position: absolute;
-  top: -1000%;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   z-index: 100;
 }

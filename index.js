@@ -40,7 +40,7 @@ function formSubmitted() {
 function checkEmptyinputFields(event) {
     $("input").each(function() {
         if ($(this).val() == "") {
-            throw "Error " + this.name + " is required!!";
+            throw "Error : " + this.name + " is required!!";
             return false;
         }
     })
@@ -64,16 +64,16 @@ $(".add-new-employee").click(function() {
 });
 
 function deleteRow(event) {
-	 $(".popup").animate({top:"37%"}, 1000);
-	  $(".overlay").animate({top:"0"},500);
+	 $(".popup").animate({left:"0",top:"30%"}, 1000);
+	  $(".overlay").animate({left:"0"},500);
 	 let parent_row = event.target.parentElement.parentElement;
   	 $(".btn-yes").click(function(){
   		parent_row.style.display = "none";
-  		$(".overlay").animate({top:"100%"},500);
-	 	$(".popup").animate({top: "-100%"}, 1500);    
+  		$(".overlay").animate({left:"100%"},500);
+	 	$(".popup").animate({left: "200%",top:"0"}, 1500);    
 	 });
   	 $(".btn-cancel").click(function(){
-  	 	$(".overlay").animate({top:"100%"},500);
-	 	$(".popup").animate({top: "-100%"}, 1500);
+  	 	$(".overlay").animate({left:"100%"},500);
+	 	$(".popup").animate({left: "200%",top:"0"}, 1500);
   	 })
 }
