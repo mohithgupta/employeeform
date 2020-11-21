@@ -452,6 +452,7 @@ tr i:hover {
   }
   tbody{
     height: auto;
+    max-height: none;
     overflow-y: auto;
     overflow-x: hidden;
   }
