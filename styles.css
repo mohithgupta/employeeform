@@ -438,7 +438,7 @@ tr i:hover {
       min-width: 450px;
       left:25%;
       top:-15vh;
-      height: auto;
+      height:282px;
       overflow-y:auto; 
   }
   thead tr { 
