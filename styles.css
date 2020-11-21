@@ -379,7 +379,7 @@ tbody {
     border-top: none;
     overflow:auto;
     display: block; 
-    height: 102px;
+    max-height: 102px;
     overflow-y: auto;
     overflow-x: hidden;
 }
