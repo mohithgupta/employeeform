@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: "Poppins", sans-serif;
     background-color: #fff;
@@ -67,7 +66,7 @@ body {
     z-index: 3;
     position: relative;
     left: 82%;
-    top: 85vh;
+    top: 80vh;
 }
 
 .add-new-employee:hover {
@@ -77,7 +76,12 @@ body {
 .add-new-employee::before {
     background-color: #fff;
 }
-
+@media only screen and (max-width:525px){
+  .new-employee{
+    background-color:#3498db; 
+    color:#fff;
+  }
+}
 /*Main*/
 
 .main-container {
@@ -87,6 +91,8 @@ body {
     background-color: #ecf0f3;
     min-height: 100vh;
     transition: all 1.5s ease-in-out;
+    overflow: hidden;
+    z-index: 3;
 }
 
 .slide {
@@ -107,6 +113,11 @@ body {
     z-index: 1;
 }
 
+.main-container.form-done:before {
+    transform: translate(50%, -20%);
+    right: 52%;
+}
+
 .company-name{ 
    position: absolute;
    top:38%;
@@ -118,7 +129,12 @@ body {
    8px 8px 12px rgba(0,0,0,0.1);
    z-index: 3;
 }
-
+@media only screen and (max-width: 512px){
+  .company-name{
+    font-size: 4rem;
+    top:35%;
+  }
+}
 /*FORM*/
 
 
@@ -144,13 +160,45 @@ body {
     transition: all 1s linear;
     z-index: 2;
     left: 0;
-    width: 60vw;
-    height: 80vh;
+    top:15%;
+    width: 70vw;
+    height: 50vh;
     padding: 20px 0 0;
     margin: 40px auto 0;
     box-shadow: -13px -13px 20px rgba(0, 0, 0, 0.1),
         8px 8px 15px rgba(255, 255, 255, 0.8);
 }
+@media only screen and (max-width: 1000px){
+  .form-div{
+    left:25%;
+  }
+
+}
+@media only screen and (max-width: 860px){
+  .form-div{
+    left:10%;
+  }
+}
+@media only screen and (max-width: 680px){
+  .form-div{
+    left:0%;
+  }
+}
+@media only screen and (max-width: 580px){
+  .form-div{
+    width: 400px;
+    left:-7%;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 520px){
+  .form-div{
+    width: 320px;
+    height: 92vh;
+    left:0%;
+  }
+}
+
 
 form {
     width: 100%;
@@ -181,7 +229,7 @@ label {
     outline: none;
     background: none;
     font-size: 18px;
-    color: #777;
+    color: #000;
     padding: 10px;
     margin: 20px 0;
     border-radius: 25px;
@@ -199,6 +247,8 @@ input[type="date"] {
 }
 
 .clear-details-btn {
+  color: #333;
+    cursor: pointer;
     box-shadow: 8px 8px 8px #cbced1,
         -5px -5px 5px #fff;
 }
@@ -210,10 +260,6 @@ input[type="date"] {
 
 .submit-btn:active {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.clear-details-btn {
-    cursor: pointer;
 }
 
 .submit-btn {
@@ -232,6 +278,47 @@ input[type="date"] {
     box-shadow: 8px 8px 8px #b1b1b1,
         -3px -3px 8px #ffffff;
 }
+@media only screen and (max-width: 860px){
+.clear-details-btn{
+  color: #fff;
+  box-shadow:  3px 3px 3px #cbced1,
+         -5px -5px 5px rgba(0,0,0,0.2)
+}
+.clear-details-btn:active {
+    box-shadow: inset 4px 4px 4px #cbced1,
+        inset -5px -5px 5px rgba(0,0,0,0.1)
+}
+}
+@media only screen and (max-width: 580px){
+  label{
+    font-size: 1.2rem
+  }
+  .clear-details-btn{
+    color: #fff
+  }
+}
+@media only screen and (max-width: 520px){
+  .input{
+    padding-right: 0
+  }
+  .name,.employee-id{
+    width: 180px
+  }
+  .select {
+    padding-right: 2%;
+  }
+  input[type="date"]{
+    width: 50%;
+  }
+  .clear-details-btn{
+    width: 45%;
+    padding-left: 0;
+  }
+  .submit-btn{
+    width: 90%;
+    height: 50px;
+  }
+}
 
 
 /*Table*/
@@ -240,42 +327,74 @@ input[type="date"] {
 .table-container {
     text-align: center;
     position: relative;
-    left: 22.5%;
-    top: 5vh;
+    left: 17%;
+    top: 30vh;
+    z-index: 8;
+    border-radius: 8px;
 }
-
+@media only screen and (max-width: 1500px){
+  .after-submit{
+    display: none;
+  }
+  .table-container{
+    left:12%;
+  }
+  .add-new-employee{
+    left:40%;
+  }
+}
+@media only screen and (max-width: 1250px){
+  .table-container{
+    left :8%;
+  }
+}
+@media only screen and (max-width: 1150px){
+.table-container{
+  left:5%;
+}
+}
+@media only screen and (max-width: 1060px){
+.table-container{
+  left:1%;
+}
+}
 .table {
     opacity: 0;
     position: absolute;
-    z-index: 2;
+    z-index:2;
     border-collapse: collapse;
-    font-size: 1rem;
-    width: auto;
-    margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: #DCD9D4 2px solid;
-    border-radius: 8px
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.25);
+    border: rgba(255,255,255,0.3) 2px solid;
+    table-layout: fixed;
 }
 
 .show-table {
     transition: all 1.5s linear;
     opacity: 1;
+
 }
 
 tbody {
     border: 1px solid #434343;
     border-top: none;
-    max-height: 5vh;
-    overflow:scroll;
+    overflow:auto;
+    display: block; 
+    height: 102px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 thead{
-  /*position: fixed;*/
+  display: table;
+  width: 100%;
   border-bottom: #000 1px solid;
 }
 thead tr {
     background: rgba(255, 255, 255, 0.25);
     font-weight: bold;
     color: #000;
+      display: block;
+  position: relative;
 }
 thead th:first-of-type {
     background-color: none;
@@ -287,11 +406,21 @@ tbody tr {
 
 th,td {
     padding: 12px 15px;
+    min-width: 200px;
+}
+th:first-of-type,td:first-of-type{
+  min-width: 20px;
+  max-width: 20px;
+}
+th:nth-of-type(3),td:nth-of-type(3),
+th:nth-of-type(4),td:nth-of-type(4),
+th:nth-of-type(6),td:nth-of-type(6){
+  min-width: 130px;
 }
 
 tr td,tr th{
-  border-right: #000 1px solid;
-  border-left: #000 1px solid;
+/*  border-right: #000 1px solid;
+  border-left: #000 1px solid;*/
 }
 tr td:first-of-type {
     background-color: none;
@@ -304,8 +433,123 @@ tr i:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.9)
 }
+  @media only screen and (max-width: 1000px){
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+    border:none;
+  }
+   table{
+      min-width: 450px;
+      left:25%;
+      top:-15vh;
+      height: 39.3vh;
+      overflow-y:auto; 
+  }
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tbody{
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
-.overlay {
+  tr { 
+    border: 1px solid #ccc; 
+  }
+  
+  td { 
+    border: none;
+    border-bottom: 1px solid #000; 
+    position: relative;
+    padding-left: 40%;
+    width: 100%;
+    text-align: left;
+  }
+  
+  td:before { 
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    padding: 10px; 
+    /*white-space: nowrap;*/
+    text-align: left;
+  }
+  td:nth-of-type(2):before { content: "Name"; }
+  td:nth-of-type(3):before { content: "Employee ID"; }
+  td:nth-of-type(4):before { content: "Department"; }
+  td:nth-of-type(5):before { content: "Email Id"; }
+  td:nth-of-type(6):before { content: "Date of Joining"; }
+
+  tr i {
+    border-radius: 50%;
+    border:#fff 1px solid;
+    padding: 05px;
+    margin-left:-800%;
+  }
+  tr i:hover {
+    background-color: rgba(0,0,0,0.3)
+  }
+  .add-new-employee{
+    left:38%;
+    top:70vh;
+  }
+}
+@media only screen and (max-width: 800px){
+  table{
+    left:20%;
+  }
+  .add-new-employee{
+    left:34%;
+  }
+}
+@media only screen and (max-width: 680px){
+  table{
+    left:15%;
+  }
+}
+@media only screen and (max-width: 600px){
+  table{
+    left:10%;
+  }
+  .add-new-employee{
+    left:30%;
+  }
+}
+@media only screen and (max-width: 540px){
+  table{
+    left:7%;
+    height: 43vh
+  }
+  .add-new-employee{
+    left:25%;
+  }
+}
+@media only screen and (max-width: 520px){
+  table{
+    left:3%;
+    top: -20vh
+  }
+  .add-new-employee{
+    left:25%;
+  }
+}
+@media only screen and (max-width: 490px){
+  table{
+    left:1%;
+    min-width: 345px;
+  }
+  tr i{
+    margin-left: -600%;
+  }
+  .add-new-employee{
+    left:25%;
+  }
+}
+
+  .overlay {
   position: fixed;
   width: 100%;
   top:100%;
@@ -318,14 +562,14 @@ tr i:hover {
 .popup {
   width: 33%;
   padding: 15px;
-  left: 0;
+  left: 0%;
   margin-left: 34%;
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
   position: absolute;
-  top: -100%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  top: -1000%;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   z-index: 100;
 }
 .popup-border{
@@ -355,69 +599,22 @@ color: #fff
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .popup {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
+    width: 33%;
+    margin-left: 33%;
   }
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .popup {
     width: 50%;
     margin-left: 25%;
   }
 }
-@media (min-width: 1200px) {
-  .popup {
-    width: 33.33333%;
-    margin-left: 33.33333%;
+@media (max-width: 1200px) {
+    .popup {
+    width: 67%;
+    margin-left: 17%;
   }
 }
 
-
-/*Transitions Effects*/
-
-.main-container.form-done:before {
-    transform: translate(50%, -20%);
-    right: 52%;
-}
-
-@media (max-width: 870px) {
-    .main-container {
-        min-height: 800px;
-        height: 100vh;
-    }
-    .main-container:before {
-        width: 1500px;
-        height: 1500px;
-        transition: 2s ease-in-out;
-    }
-
-    .main-container.form-done:before {
-        transform: translate(20%, -30%);
-    }
-}
-
-@media (max-width: 570px) {
-    form {
-        padding: 0 1.5rem;
-    }
-
-    .image {
-        display: none;
-    }
-
-    .main-container {
-        padding: 1.5rem;
-    }
-
-    .main-container:before {
-        bottom: 72%;
-        left: 50%;
-    }
-
-    .main-container.form-done:before {
-        bottom: 28%;
-        left: 50%;
-    }
-}

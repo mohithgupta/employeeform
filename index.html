@@ -26,10 +26,10 @@
         <div class="form-div">
             <p class="form-heading">Employee Details </p>
             <form class="details-form" id="form">
-                <label for="Name">Name :<input type="text" name="Name" class="input" id="name" required></label>
-                <label for="Employee ID">Employee ID :<input type="text" name="Employee ID" class="input" id="employee-id" required></label>
+                <label for="Name">Name :<input type="text" name="Name" class="input name" required></label>
+                <label for="Employee ID">Employee ID :<input type="text" name="Employee ID" class="input employee-id" required></label>
                 <label for="Department">Department :
-                    <select name="Department" class="select" id="select-option" required>
+                    <select name="Department" class="select" required>
                         <option value="Frontend">Frontend</option>
                         <option value="Backend">Backend</option>
                         <option value="Full Stack">Full Stack</option>
@@ -37,8 +37,8 @@
                         <option value="Security Analyst">Security Analyst</option>
                     </select>
                 </label>
-                <label for="email"> Email ID : <input type="text" name="email" class="input" id="email" required></label>
-                <label for="doj"> Date of Joining : <input type="date" name="doj" class="input" id="doj" required> </label>
+                <label for="email"> Email ID : <input type="text" name="email" class="input" required></label>
+                <label for="doj"> Date of Joining : <input type="date" name="doj" class="input" required> </label>
                 <button name="clear" class="input clear-details-btn" id="clear-details-button">Clear Details</button>
                 <input type="submit" class="submit-btn" id="submit-button" value="Submit Details" />
             </form>
@@ -75,9 +75,8 @@
 
 
     </main>
-    <script src="https://kit.fontawesome.com/904a7d5ff1.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
