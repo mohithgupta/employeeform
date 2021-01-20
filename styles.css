@@ -121,11 +121,11 @@ body {
 .company-name{ 
    position: absolute;
    top:38%;
-   left:5%;
-   font-size: 6rem;
+   left:2%;
+   font-size:5rem;
    color: rgba(4, 190, 254,0.1);
    text-shadow: 
-   -8px -8px 12px rgba(255,255,255,0.1),
+   -8px -8px 12px rgba(255,255,255,0.15),
    8px 8px 12px rgba(0,0,0,0.1);
    z-index: 3;
 }
